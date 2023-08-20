@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>技术笔记 - 404 随想</title>
+        <title>GitHub Page 域名绑定 - 404 随想</title>
 
 
         <!-- Custom HTML head -->
@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">介绍</a></li><li class="chapter-item expanded "><a href="../life/index.html"><strong aria-hidden="true">1.</strong> 生活感悟</a></li><li class="chapter-item expanded "><a href="../production/index.html"><strong aria-hidden="true">2.</strong> 产品灵感</a></li><li class="chapter-item expanded "><a href="../develop/index.html" class="active"><strong aria-hidden="true">3.</strong> 技术笔记</a></li><li class="chapter-item expanded "><a href="../misc/index.html"><strong aria-hidden="true">4.</strong> 杂</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../misc/bind-doman-to-github-page.html"><strong aria-hidden="true">4.1.</strong> GitHub Page 域名绑定</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">介绍</a></li><li class="chapter-item expanded "><a href="../life/index.html"><strong aria-hidden="true">1.</strong> 生活感悟</a></li><li class="chapter-item expanded "><a href="../production/index.html"><strong aria-hidden="true">2.</strong> 产品灵感</a></li><li class="chapter-item expanded "><a href="../develop/index.html"><strong aria-hidden="true">3.</strong> 技术笔记</a></li><li class="chapter-item expanded "><a href="../misc/index.html"><strong aria-hidden="true">4.</strong> 杂</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../misc/bind-doman-to-github-page.html" class="active"><strong aria-hidden="true">4.1.</strong> GitHub Page 域名绑定</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -166,19 +166,28 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="技术笔记"><a class="header" href="#技术笔记">技术笔记</a></h1>
+                        <h1 id="github-page-域名绑定"><a class="header" href="#github-page-域名绑定">GitHub Page 域名绑定</a></h1>
+<p>Github Page 不仅可以绑定顶级域名，也可以绑定二级域名，方法如下</p>
+<h2 id="a-记录解析"><a class="header" href="#a-记录解析">A 记录解析</a></h2>
+<p>设置 4 个 A记录，解析到以下 4 个 IP, 如果是顶级域名就是 4 个 <code>@</code> ,子域名就对应 4 个子域名单词即可，如 <code>blog</code></p>
+<pre><code>185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+</code></pre>
+<h2 id="项目中-cname-设置"><a class="header" href="#项目中-cname-设置">项目中 CNAME 设置</a></h2>
+<p>别忘记在项目中添加 CNAME 文件，内容为绑定的域名，不需要 http/https 前缀，如</p>
+<pre><code>blog.404.net.cn
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../production/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../misc/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="../misc/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -186,13 +195,10 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../production/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../misc/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../misc/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
             </nav>
 
         </div>
